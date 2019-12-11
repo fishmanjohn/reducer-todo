@@ -6,11 +6,9 @@ const TodoList = (props) =>{
     console.log(`HEY DUMMY${props}`)
     return(
             <div>
-                {props.map( todo =>(<Todo
-                key ={props.list.id}
-                todo={todo}
-                handleToggleComplete={props.handleToggleComplete}
-                />))}
+                {props.state.list.map((todo) =>{
+                 return <Todo key ={props.state.list.id} todo={todo} handleToggleComplete={props.handleToggleComplete}/> 
+                })}
 
             </div>
         )
